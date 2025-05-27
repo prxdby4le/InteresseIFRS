@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/custom_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="INGRESSO!"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/header_view"
+        app:layout_constraintEnd_toEndOf="@id/header_view"
+        app:layout_constraintStart_toStartOf="@id/header_view"
+        app:layout_constraintTop_toTopOf="@id/header_view" />
+
+    <View
+        android:id="@+id/description_view"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@id/description_view"
+        app:layout_constraintEnd_toEndOf="@id/description_view"
+        app:layout_constraintStart_toStartOf="@id/description_view"
+        app:layout_constraintTop_toTopOf="@id/description_view">
+
+        <TextView
+            android:id="@+id/desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="start"
+            android:padding="16dp"
+            android:text="@string/text_telainicial"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </ScrollView>
+
+    <View
+        android:id="@+id/botoes_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/shape_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_view"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/botoes_background"
+        app:layout_constraintEnd_toEndOf="@id/botoes_background"
+        app:layout_constraintStart_toStartOf="@id/botoes_background"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="@id/botoes_background">
+
+        <Button
+            android:id="@+id/precesso_seletivo_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:onClick="precesso_seletivo_view"
+            android:text="Processo seletivo" />
+
+        <Button
+            android:id="@+id/guia_vocacao_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:onClick="guia_vocacao_view"
+            android:text="Guia de vocação" />
+
+        <Button
+            android:id="@+id/sobre_cursos_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:onClick="sobre_cursos_view"
+            android:text="Sobre os cursos integrados" />
+
+        <Button
+            android:id="@+id/inscricoes_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:onClick="inscricoes_view"
+            android:text="Faça as suas inscrições" />
+
+        <Button
+            android:id="@+id/chamadas_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:onClick="chamadas_view"
+            android:text="Acompanhe as chamadas" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
