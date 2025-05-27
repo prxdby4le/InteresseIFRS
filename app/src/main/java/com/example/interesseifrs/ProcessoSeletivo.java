@@ -51,8 +51,9 @@ public class ProcessoSeletivo extends AppCompatActivity {
         Intent i = new Intent(this, Proc_DataHora.class);
         startActivity(i);
     }
-    public void proc_abertura (View v) {
-        Intent i = new Intent(this, Proc_Status.class);
+    public void proc_status (View v) {
+        Uri site = Uri.parse("https://ingresso.ifrs.edu.br/2025-2/");
+        Intent i = new Intent(Intent.ACTION_VIEW, site);
         startActivity(i);
     }
 }

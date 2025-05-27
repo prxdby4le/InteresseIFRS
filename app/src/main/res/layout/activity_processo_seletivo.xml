@@ -135,13 +135,13 @@
             android:text="Data e hora da prova" />
 
         <Button
-            android:id="@+id/proc_abertura"
+            android:id="@+id/proc_status"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:onClick="proc_abertura"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:onClick="proc_status"
             android:text="Acompanhe o Status da sua Inscrição" />
 
     </LinearLayout>
