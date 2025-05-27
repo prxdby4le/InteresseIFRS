@@ -1,8 +1,50 @@
 <resources>
     <string name="app_name">Interesse IFRS</string>
-    <string name="text_telainicial">Se você está buscando uma educação de qualidade e deseja fazer parte do Instituto Federal do Rio Grande do Sul (IFRS), você está no lugar certo! Este aplicativo contém todas as informações necessárias para o seu ingresso, incluindo cursos disponíveis, processos seletivos, prazos de inscrição e requisitos.
-Aqui, você encontra detalhes sobre as oportunidades oferecidas pelo IFRS, além de orientações para tornar sua entrada na instituição mais fácil e acessível. Fique por dentro das datas importantes, conheça os diferentes tipos de ensino oferecidos e descubra como dar o primeiro passo para uma formação de excelência.
-Explore o aplicativo e prepare-se para construir seu futuro no IFRS! 🚀😃
-Se precisar de mais informações, estamos aqui para ajudar!
-</string>
+
+    <string name="text_telainicial"><![CDATA[
+        <p>Se você está buscando uma educação de qualidade e deseja fazer parte do Instituto Federal do Rio Grande do Sul (IFRS), você está no lugar certo! Este aplicativo contém todas as informações necessárias para o seu ingresso, incluindo cursos disponíveis, processos seletivos, prazos de inscrição e requisitos.</p>
+        <br>
+        <p>Aqui, você encontra detalhes sobre as oportunidades oferecidas pelo IFRS, além de orientações para tornar sua entrada na instituição mais fácil e acessível. Fique por dentro das datas importantes, conheça os diferentes tipos de ensino oferecidos e descubra como dar o primeiro passo para uma formação de excelência.</p>
+        <br>
+        <p>Explore o aplicativo e prepare-se para construir seu futuro no IFRS! 🚀😃 Se precisar de mais informações, estamos aqui para ajudar!</p>
+    ]]></string>
+
+
+    <string name="processo_desc"><![CDATA[
+        <p>Para entrar no ensino médio do IFRS (Instituto Federal do Rio Grande do Sul), é preciso participar do processo seletivo, que pode ser por meio de prova, nota do Enem ou sorteio, dependendo do curso e campus. Para os cursos técnicos integrados ao ensino médio, é necessário ter concluído ou estar concluindo o 9º ano do ensino fundamental.</p>
+        <br>
+        <h2>Como se inscrever:</h2>
+
+        <p><b>1. Verificar o edital:</b> Acompanhar o site de ingresso do IFRS para saber as datas do processo seletivo e as formas de ingresso de cada curso.</p>
+        <br>
+        <p><b>2. Preencher o formulário:</b> Realizar a inscrição por meio de formulário eletrônico no site de ingresso.</p>
+        <br>
+        <p><b>3. Pagar a taxa:</b> Caso seja cobrada, pagar a taxa de inscrição.</p>
+        <br>
+        <p><b>4. Isenção de taxa:</b> Caso necessite, solicitar a isenção da taxa de inscrição.</p>
+        <br>
+        <p><b>5. Documentos:</b> Preparar os documentos necessários, como RG, CPF e comprovante de conclusão do ensino fundamental.</p>
+        <br>
+        <p><b>6. Conta no GOV.BR:</b> Ter uma conta no GOV.BR.</p>
+    ]]></string>
+    <string name="como_fazer_inscrição"><![CDATA[
+        <h2>Acesse o formulário;</h2>
+        <br>
+        <p>Clique no botão abaixo! Você será redirecionado ao formulário online de inscrição para o processo seletivo do Instituto Federal de novos alunos para os cursos técnicos integrados ao ensino médio!</p>
+        <br>
+        <p>Após, acompanhe sua inscrição no Site OFICIAL! </p>
+        <br>
+        <p>Caso tenha interesse na isenção, acesse o botão de cor preta, ele te redirecionará para a página em que você pode solicitar sua isenção! (ter isenção não significa estar inscrito, então tenha certeza de que você fez os dois processoes, primeiro o da isenção e depois o da inscrição!</p>
+    ]]></string>
+    <string name="documentos_e_itens"><![CDATA[
+        <h1>Documentação:</h1>
+        <br>
+        <h2>Documento de Identidade com foto:</h2>
+        <p>- RG, CNH, passaporte, carteira de trabalho ou outro documento oficial com foto são aceitos. </p>
+        <br>
+        <h2>Caneta esferográfica azul ou preta:</h2>
+        <p>- <b>É importante levar uma caneta com tinta de cor permitida para preencher a folha de respostas.</b><p>
+        <br>
+        <h3>Se você está prestes a fazer a prova: Boa Sorte!</h3>
+    ]]></string>
 </resources>
