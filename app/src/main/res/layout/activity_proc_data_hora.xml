@@ -87,6 +87,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
+            android:onClick="voltar"
             android:layout_marginRight="20dp"
             android:text="Voltar" />
 
@@ -97,6 +98,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
+            android:onClick="home"
             android:layout_marginLeft="20dp"
             android:text="Pág.Inicial" />
     </LinearLayout>

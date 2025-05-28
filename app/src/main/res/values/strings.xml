@@ -47,4 +47,6 @@
         <br>
         <h3>Se você está prestes a fazer a prova: Boa Sorte!</h3>
     ]]></string>
+    <string name="ifrs_campus_rolante">Local da prova: IFRS Campus Rolante</string>
+    <string name="location_permission_denied">Infelizmente você não pode usar essa função, pois negou permissão de acessar sua localização</string>
 </resources>

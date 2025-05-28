@@ -36,18 +36,16 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, GuiaVocacao.class);
         startActivity(i);
     }
-    public void sobre_cursos_view (View v) {
+    public void vantagens_if (View v) {
         Intent i = new Intent(MainActivity.this, SobreCursos.class);
         startActivity(i);
     }
-    public void inscricoes_view(View v) {
-        Uri site = Uri.parse("https://ifrs.edu.br");
-        Intent i = new Intent(Intent.ACTION_VIEW, site);
+    public void transporte_view(View v) {
+        Intent i = new Intent(MainActivity.this, LinhasIF.class);
         startActivity(i);
     }
-    public void chamadas_view(View v) {
-        Uri site = Uri.parse("https://ifrs.edu.br");
-        Intent i = new Intent(Intent.ACTION_VIEW, site);
+    public void sobre_view(View v) {
+        Intent i = new Intent(MainActivity.this, Sobre_devs.class);
         startActivity(i);
     }
     public void custom_text(View v) {

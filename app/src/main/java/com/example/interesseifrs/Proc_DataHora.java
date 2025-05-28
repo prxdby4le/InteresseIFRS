@@ -1,7 +1,9 @@
 package com.example.interesseifrs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -72,11 +74,11 @@ public class Proc_DataHora extends AppCompatActivity {
                 String countdownString;
                 if (months > 0) {
                     countdownString = String.format(Locale.getDefault(),
-                            "Faltam:\n%d meses\n%d dias\n%02d horas\n%02d minutos\n%02d segundos\n\npara as inscrições do IFRS",
+                            "Faltam:\n%d meses\n%d dias\n%02d horas\n%02d minutos\n%02d segundos\n\npara o dia 1 de Setembro, o dia da Prova que faz parte do processo seletivo! Boa sorte, seja pontual e não esqueça nenhum item necessário pra poder entrar e fazer a prova.",
                             months, days, hours, minutes, seconds);
                 } else {
                     countdownString = String.format(Locale.getDefault(),
-                            "Faltam:\n%d dias\n%02d horas\n%02d minutos\n%02d segundos\n\npara as inscrições do IFRS",
+                            "Faltam:\n%d dias\n%02d horas\n%02d minutos\n%02d segundos\n\npara o dia 1 de Setembro, o dia da Prova que faz parte do processo seletivo! Boa sorte, seja pontual e não esqueça nenhum item necessário pra poder entrar e fazer a prova.",
                             days, hours, minutes, seconds);
                 }
 
@@ -99,5 +101,14 @@ public class Proc_DataHora extends AppCompatActivity {
     // Calcula dias entre duas datas (desconsiderando meses e anos)
     private static long daysBetween(Calendar startDate, Calendar endDate) {
         return endDate.get(Calendar.DAY_OF_MONTH) - startDate.get(Calendar.DAY_OF_MONTH);
+    }
+
+    public void voltar (View v) {
+        Intent i = new Intent(this, ProcessoSeletivo.class);
+        startActivity(i);
+    }
+    public void home (View v) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }

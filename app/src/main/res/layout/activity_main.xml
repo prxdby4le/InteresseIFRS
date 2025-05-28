@@ -118,34 +118,35 @@
             android:text="Guia de vocação" />
 
         <Button
-            android:id="@+id/sobre_cursos_view"
+            android:id="@+id/vantagens_if"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
-            android:onClick="sobre_cursos_view"
-            android:text="Sobre os cursos integrados" />
+            android:onClick="vantagens_if"
+            android:text="Vantagens de ser estudante do Instituto Federal" />
 
         <Button
-            android:id="@+id/inscricoes_view"
+            android:id="@+id/transporte_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
-            android:onClick="inscricoes_view"
-            android:text="Faça as suas inscrições" />
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:onClick="transporte_view"
+            android:text="Linhas de transporte que passam pelo IF" />
 
         <Button
-            android:id="@+id/chamadas_view"
+            android:id="@+id/sobre_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:backgroundTint="@color/black"
             android:textColor="@color/white"
-            android:onClick="chamadas_view"
-            android:text="Acompanhe as chamadas" />
+            android:onClick="sobre_view"
+            android:text="Sobre" />
+
     </LinearLayout>
 
 
