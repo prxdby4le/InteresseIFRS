@@ -8,6 +8,7 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
+    <!-- Cabeçalho -->
     <View
         android:id="@+id/header_view"
         android:layout_width="0dp"
@@ -38,6 +39,7 @@
         app:layout_constraintStart_toStartOf="@id/header_view"
         app:layout_constraintTop_toTopOf="@id/header_view" />
 
+    <!-- Área de conteúdo principal -->
     <View
         android:id="@+id/description_view"
         android:layout_width="0dp"
@@ -75,79 +77,123 @@
             android:textStyle="bold" />
     </ScrollView>
 
+    <!-- Área de botões reorganizada -->
     <View
         android:id="@+id/botoes_background"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/shape_layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description_view"
-        />
+        app:layout_constraintTop_toBottomOf="@id/description_view"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="@id/botoes_background"
         app:layout_constraintEnd_toEndOf="@id/botoes_background"
         app:layout_constraintStart_toStartOf="@id/botoes_background"
-        android:layout_margin="20dp"
         app:layout_constraintTop_toTopOf="@id/botoes_background">
 
-        <Button
-            android:id="@+id/precesso_seletivo_view"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:onClick="precesso_seletivo_view"
-            android:text="Processo seletivo" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-        <Button
-            android:id="@+id/guia_vocacao_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:onClick="guia_vocacao_view"
-            android:text="Guia de vocação" />
+            <!-- Grupo 1: Processo seletivo -->
+            <Button
+                android:id="@+id/precesso_seletivo_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_launcher_foreground"
+                android:gravity="center"
+                android:onClick="precesso_seletivo_view"
+                android:text="Processo Seletivo"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/vantagens_if"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:onClick="vantagens_if"
-            android:text="Vantagens de ser estudante do Instituto Federal" />
+            <!-- Grupo 2: Cursos e vocação -->
+            <Button
+                android:id="@+id/guia_vocacao_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_launcher_foreground"
+                android:gravity="center"
+                android:onClick="guia_vocacao_view"
+                android:text="Guia de Vocação"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/transporte_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:onClick="transporte_view"
-            android:text="Linhas de transporte que passam pelo IF" />
+            <Button
+                android:id="@+id/cursos_ofertados"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_launcher_foreground"
+                android:gravity="center"
+                android:onClick="cursos_ofertados"
+                android:text="Cursos Ofertados"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/sobre_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
-            android:onClick="sobre_view"
-            android:text="Sobre" />
+            <!-- Grupo 3: Vantagens e infraestrutura -->
+            <Button
+                android:id="@+id/vantagens_if"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_launcher_foreground"
+                android:gravity="center"
+                android:onClick="vantagens_if"
+                android:text="Vantagens do IF"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/transporte_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_launcher_foreground"
+                android:gravity="center"
+                android:onClick="transporte_view"
+                android:text="Transporte"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-
+            <!-- Grupo 4: Sobre -->
+            <Button
+                android:id="@+id/sobre_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/black"
+                android:drawableTop="@drawable/ic_launcher_foreground"
+                android:gravity="center"
+                android:onClick="sobre_view"
+                android:text="Sobre"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

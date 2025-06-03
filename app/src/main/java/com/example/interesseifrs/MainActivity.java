@@ -58,4 +58,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(Intent.ACTION_VIEW, site);
         startActivity(i);
     }
+    public void cursos_ofertados(View v) {
+        Intent i = new Intent(MainActivity.this, CursosTecnicos.class);
+        startActivity(i);
+    }
 }
