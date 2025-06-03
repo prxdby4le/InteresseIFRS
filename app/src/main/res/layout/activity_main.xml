@@ -115,7 +115,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_launcher_foreground"
+
                 android:gravity="center"
                 android:onClick="precesso_seletivo_view"
                 android:text="Processo Seletivo"
@@ -130,7 +130,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_launcher_foreground"
+
                 android:gravity="center"
                 android:onClick="guia_vocacao_view"
                 android:text="Guia de Vocação"
@@ -144,7 +144,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_launcher_foreground"
+
                 android:gravity="center"
                 android:onClick="cursos_ofertados"
                 android:text="Cursos Ofertados"
@@ -159,7 +159,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_launcher_foreground"
+
                 android:gravity="center"
                 android:onClick="vantagens_if"
                 android:text="Vantagens do IF"
@@ -173,7 +173,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_launcher_foreground"
+
                 android:gravity="center"
                 android:onClick="transporte_view"
                 android:text="Transporte"
@@ -187,7 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="@color/black"
-                android:drawableTop="@drawable/ic_launcher_foreground"
+
                 android:gravity="center"
                 android:onClick="sobre_view"
                 android:text="Sobre"

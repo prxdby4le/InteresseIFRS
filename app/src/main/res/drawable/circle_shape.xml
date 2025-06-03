@@ -7,7 +7,7 @@
 
     <!-- Cor da borda (opcional) -->
     <stroke
-        android:width="2dp"
+        android:width="10dp"
         android:color="#FFFFFF"/>
 
     <!-- Tamanho (pode ser definido no layout também) -->

@@ -81,7 +81,7 @@
                         android:background="@drawable/circle_shape"
                         android:contentDescription="Logo da empresa"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_foreground" />
+                        android:src="@mipmap/citral_logo_certo" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -149,7 +149,7 @@
                         android:background="@drawable/circle_shape"
                         android:contentDescription="Logo da empresa"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_foreground" />
+                        android:src="@mipmap/maroto_logo" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -211,7 +211,7 @@
                         android:background="@drawable/circle_shape"
                         android:contentDescription="Logo da empresa"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_launcher_foreground" />
+                        android:src="@mipmap/transp_ss_logo" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -250,6 +250,68 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Empresa que cuida das linhas municipais e traz os estudantes do próprio municipio para Rolante."
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle_shape"
+                        android:contentDescription="Logo da empresa"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/mw_logo" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Mw Turismo"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Tipo de serviço: Transporte estudantil."
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contato: (51) 3547-1594"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Empresa que cuida das linhas externas e traz os estudantes todo dia de manhã."
                     android:textColor="#FFFFFF"
                     android:textSize="13sp" />
             </LinearLayout>

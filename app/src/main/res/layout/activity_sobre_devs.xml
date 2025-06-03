@@ -80,7 +80,7 @@
                         android:background="@drawable/circle_shape"
                         android:contentDescription="Foto Kléber"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/kleber" />
+                        android:src="@mipmap/kleber_foto" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -129,7 +129,7 @@
                         android:background="@drawable/circle_shape"
                         android:contentDescription="Foto do Iago"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/iago" />
+                        android:src="@mipmap/iago_foto" />
 
                     <LinearLayout
                         android:layout_width="0dp"
