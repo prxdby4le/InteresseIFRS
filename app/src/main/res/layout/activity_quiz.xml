@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Cabeçalho com TextView dentro -->
+        <RelativeLayout
+            android:id="@+id/header_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/shape_layout">
+
+            <TextView
+                android:id="@+id/custom_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="VOCAÇÃO!"
+                android:textColor="#FFFFFF"
+                android:textSize="70sp"
+                android:textStyle="bold"
+                android:onClick="custom_text"/>
+
+        </RelativeLayout>
+
+        <!-- Conteúdo do Quiz -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/shape_layout">
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbOptionA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rbOptionB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rbOptionC"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:text="Próxima" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -69,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
+                    android:onClick="form_inscricao_site"
                     android:text="Acesse o Formulário de inscrição aqui!" />
 
                 <Button
@@ -77,6 +78,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
+                    android:onClick="form_acompanhamento"
                     android:text="Acompanhe aqui!" />
 
                 <Button
@@ -85,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
                     android:textColor="@color/white"
+                    android:onClick="acesse_isencao"
                     android:text="Solicite a Isenção do valor da prova!" />
             </LinearLayout>
 

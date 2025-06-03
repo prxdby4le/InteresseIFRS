@@ -47,6 +47,24 @@
         <br>
         <h3>Se você está prestes a fazer a prova: Boa Sorte!</h3>
     ]]></string>
+    <string name="vantagens"><![CDATA[
+        <h1>Por que estudar no Instituto Federal?</h1>
+        <p>O Instituto Federal oferece uma formação completa e de qualidade para os estudantes do ensino médio, unindo ensino acadêmico sólido e preparação para o mercado de trabalho.</p>
+
+        <h2>Ensino de Qualidade</h2>
+        <p>Os Institutos Federais são reconhecidos pelo ensino de alto nível, com professores qualificados e infraestrutura moderna.</p>
+
+        <h2>Curso Técnico Integrado</h2>
+        <p>Além das disciplinas tradicionais, os alunos também podem cursar um <strong>curso técnico</strong>, adquirindo conhecimentos práticos que facilitam a inserção no mercado.</p>
+
+        <h2>Gratuidade</h2>
+        <p>Por ser uma instituição pública, o ensino no Instituto Federal é <strong>gratuito</strong>, garantindo acesso a uma educação de qualidade sem custos.</p>
+
+        <h2>Oportunidades Futuras</h2>
+        <p>Os estudantes têm acesso a oportunidades como bolsas, projetos de pesquisa, intercâmbio e estágios, ampliando suas chances de sucesso acadêmico e profissional.</p>
+
+        <p>Estudar no Instituto Federal é investir no futuro com uma formação sólida e acessível!</p>
+    ]]></string>
     <string name="ifrs_campus_rolante">Local da prova: IFRS Campus Rolante</string>
     <string name="location_permission_denied">Infelizmente você não pode usar essa função, pois negou permissão de acessar sua localização</string>
 </resources>

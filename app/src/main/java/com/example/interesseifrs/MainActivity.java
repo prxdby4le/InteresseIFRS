@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void guia_vocacao_view (View v) {
-        Intent i = new Intent(MainActivity.this, GuiaVocacao.class);
+        Intent i = new Intent(MainActivity.this, QuizActivity.class);
         startActivity(i);
     }
     public void vantagens_if (View v) {

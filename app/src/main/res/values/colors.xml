@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <!-- Primary Colors -->
+    <color name="primary_color">#667eea</color>
+    <color name="primary_dark">#5a6fd8</color>
+    <color name="primary_light">#8ea2f5</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary_color">#764ba2</color>
+    <color name="secondary_dark">#5d3a7f</color>
+    <color name="secondary_light">#9b6bc7</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_color">#4ecdc4</color>
+    <color name="accent_dark">#3fb3a9</color>
+    <color name="accent_light">#7dd8d1</color>
+
+    <!-- Status Colors -->
+    <color name="success_color">#2ecc71</color>
+    <color name="error_color">#e74c3c</color>
+    <color name="warning_color">#f39c12</color>
+    <color name="info_color">#3498db</color>
+
+    <!-- Neutral Colors -->
+    <color name="white">#ffffff</color>
+    <color name="white_95">#f2f2f2</color>
+    <color name="white_90">#e6e6e6</color>
+    <color name="white_80">#cccccc</color>
+    <color name="white_30">#4d4d4d</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_tertiary">#999999</color>
+
+    <!-- Background Colors -->
+    <color name="background_primary">#f8f9fa</color>
+    <color name="background_secondary">#e9ecef</color>
+
+    <!-- Course Colors -->
+    <color name="informatica_color">#667eea</color>
+    <color name="agropecuaria_color">#27ae60</color>
+    <color name="administracao_color">#f39c12</color>
+
+    <color name="radio_selected_border">#2196F3</color>
+    <color name="radio_selected_center">#2196F3</color>
+    <color name="radio_normal_border">#9E9E9E</color>
+    <color name="radio_pressed_border">#1976D2</color>
+    <color name="radio_disabled_border">#E0E0E0</color>
+    <color name="radio_disabled_background">#F5F5F5</color>
+    <color name="radio_disabled_center">#BDBDBD</color>
+
+    <color name="warning_background">#FFF3CD</color>
+    <color name="warning_border">#FFECB3</color>
+    <color name="warning_text">#856404</color>
+    <color name="warning_dark">#FF8F00</color>
+    <color name="warning_light">#FFFDE7</color>
+
+    <!-- Alternative Warning Palettes -->
+    <color name="warning_orange_bg">#FFF4E6</color>
+    <color name="warning_orange_border">#FFD699</color>
+    <color name="warning_orange_text">#CC6600</color>
+
+    <color name="warning_amber_bg">#FFFBF0</color>
+    <color name="warning_amber_border">#FFE082</color>
+    <color name="warning_amber_text">#F57F17</color>
 </resources>
