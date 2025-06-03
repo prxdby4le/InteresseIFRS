@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void transporte_view(View v) {
-        Intent i = new Intent(MainActivity.this, LinhasIF.class);
+        Intent i = new Intent(MainActivity.this, Transportadoras.class);
         startActivity(i);
     }
     public void sobre_view(View v) {

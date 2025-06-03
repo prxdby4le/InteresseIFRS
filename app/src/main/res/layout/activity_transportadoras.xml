@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Sobre_devs">
+    tools:context=".Transportadoras">
 
     <!-- Cabeçalho -->
     <View
@@ -29,16 +29,16 @@
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:maxLines="1"
-        android:text="DEVS"
+        android:text="TRANSPORTES"
         android:textColor="#FFFFFF"
-        android:textSize="70sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/header_view"
         app:layout_constraintEnd_toEndOf="@id/header_view"
         app:layout_constraintStart_toStartOf="@id/header_view"
         app:layout_constraintTop_toTopOf="@id/header_view" />
 
-    <!-- ScrollView com conteúdo principal -->
+    <!-- ScrollView com a lista de transportadoras -->
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="0dp"
@@ -53,34 +53,35 @@
         app:layout_constraintTop_toBottomOf="@id/header_view">
 
         <LinearLayout
+            android:id="@+id/transportadoras_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Modelo de item de transportadora (pode ser replicado) -->
             <LinearLayout
-                android:id="@+id/description_view"
+                android:id="@+id/transportadora_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/shape_layout"
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Pessoa 1 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/person1_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:id="@+id/logo_empresa"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_marginEnd="16dp"
                         android:background="@drawable/circle_shape"
-                        android:contentDescription="Foto Kléber"
+                        android:contentDescription="Logo da empresa"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/kleber" />
+                        android:src="@drawable/ic_launcher_foreground" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -89,77 +90,170 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/citral"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
-                            android:text="Kléber Henrique"
+                            android:text="Citral"
                             android:textColor="#FFFFFF"
-                            android:textSize="20sp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tipo_servico"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Estudante do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, formando no curso Técnico de Informática - 4o ano (produtor musical nas horas vagas)"
+                            android:layout_marginBottom="4dp"
+                            android:text="Tipo de serviço: Transporte estudantil."
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/contato"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contato: (51) 9 9454-6869"
                             android:textColor="#FFFFFF"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Divisor -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="24dp"
-                    android:background="#FFFFFF" />
-
-                <!-- Pessoa 2 -->
-                <LinearLayout
-                    android:id="@+id/view_imp"
+                <TextView
+                    android:id="@+id/descricao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/person2_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/circle_shape"
-                        android:contentDescription="Foto do Iago"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iago" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:text="Iago J. Basei"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Estudante do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, formando no Curso Técnico de Informática - 4o ano (pizzaiolo nas horas vagas)"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </LinearLayout>
+                    android:layout_marginTop="8dp"
+                    android:text="Empresa contratada que oferece passe livre para estudantes de Igrejinha, Parobé, Taquara e Santo Antônio da Patrulha"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
             </LinearLayout>
 
-            <!-- Espaço extra no final se necessário -->
-            <View
+            <!-- Exemplo de outra transportadora (copie este bloco para adicionar mais) -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="24dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle_shape"
+                        android:contentDescription="Logo da empresa"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Maroto"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Tipo de serviço: Transporte estudantil."
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contato: (51) 99958-4720"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Empresa que cuida das linhas externas e traz os estudantes todo dia de manhã."
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_layout"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle_shape"
+                        android:contentDescription="Logo da empresa"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Transporte SS"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Tipo de serviço: Transporte estudantil."
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contato: (51) 3547 2291"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Empresa que cuida das linhas municipais e traz os estudantes do próprio municipio para Rolante."
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
