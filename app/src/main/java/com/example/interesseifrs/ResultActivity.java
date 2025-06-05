@@ -2,6 +2,7 @@ package com.example.interesseifrs;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,5 +41,13 @@ public class ResultActivity extends AppCompatActivity {
             startActivity(new Intent(this, QuizActivity.class));
             finish();
         });
+    }
+    public void voltar (View v) {
+        Intent i = new Intent(this, QuizActivity.class);
+        startActivity(i);
+    }
+    public void home (View v) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }

@@ -38,6 +38,7 @@
 
         <!-- Container do conteúdo (abaixo do cabeçalho) -->
         <LinearLayout
+            android:id="@+id/content_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/header_view"
@@ -72,6 +73,40 @@
                 android:text="Refazer teste"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <!-- Layout dos botões de ação -->
+        <LinearLayout
+            android:id="@+id/action_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_container"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/voltar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/white"
+                android:onClick="voltar"
+                android:text="Voltar"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/white"
+                android:onClick="home"
+                android:text="Pág.Inicial"
+                android:textColor="@color/black" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>
