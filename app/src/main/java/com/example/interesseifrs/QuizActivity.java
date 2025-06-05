@@ -10,7 +10,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -23,8 +22,13 @@ public class QuizActivity extends AppCompatActivity {
     private ProgressBar progressBar;
 
     private int currentQuestion = 0;
-    private int[] answers = new int[10]; // 0 = não respondido, 1 = A, 2 = B, 3 = C
+    private String[] answers = new String[10]; // Armazena diretamente o curso escolhido
     private int agroCount = 0, adminCount = 0, infoCount = 0;
+
+    // Constantes para os cursos
+    private static final String AGRO = "AGRO";
+    private static final String INFO = "INFO";
+    private static final String ADMIN = "ADMIN";
 
     private String[] questions = {
             "Qual ambiente de trabalho você imagina como o mais inspirador?",
@@ -90,16 +94,29 @@ public class QuizActivity extends AppCompatActivity {
                     "Mergulhar em um universo de inovações tecnológicas e aprendizado contínuo em ambientes digitais.",
                     "Ser o responsável por coordenar estratégias e impulsionar o crescimento por meio da gestão e organização."
             }
-            // Adicione as outras opções seguindo o mesmo padrão
+    };
+
+    // Mapeamento direto: cada posição corresponde ao curso que a resposta representa
+    // Para cada pergunta: [Curso da Opção A, Curso da Opção B, Curso da Opção C]
+    private String[][] optionMapping = {
+            {AGRO, INFO, ADMIN},    // Pergunta 0
+            {AGRO, INFO, ADMIN},    // Pergunta 1
+            {AGRO, INFO, ADMIN},    // Pergunta 2
+            {AGRO, INFO, ADMIN},    // Pergunta 3
+            {AGRO, INFO, ADMIN},    // Pergunta 4
+            {AGRO, INFO, ADMIN},    // Pergunta 5
+            {AGRO, INFO, ADMIN},    // Pergunta 6
+            {AGRO, INFO, ADMIN},    // Pergunta 7
+            {AGRO, INFO, ADMIN},    // Pergunta 8
+            {AGRO, INFO, ADMIN}     // Pergunta 9
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz); // Remova EdgeToEdge se não for essencial
+        setContentView(R.layout.activity_quiz);
 
-        // Substitua a chamada do ViewCompat por:
-        View rootView = findViewById(android.R.id.content); // Usa a view raiz padrão
+        View rootView = findViewById(android.R.id.content);
         ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -139,6 +156,11 @@ public class QuizActivity extends AppCompatActivity {
         rbOptionB.setText(options[currentQuestion][1]);
         rbOptionC.setText(options[currentQuestion][2]);
 
+        // Limpa seleções anteriores
+        rbOptionA.setChecked(false);
+        rbOptionB.setChecked(false);
+        rbOptionC.setChecked(false);
+
         progressBar.setProgress(currentQuestion + 1);
 
         if (currentQuestion == questions.length - 1) {
@@ -151,43 +173,63 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void saveAnswer() {
+        // Salva diretamente o curso correspondente à opção selecionada
         if (rbOptionA.isChecked()) {
-            answers[currentQuestion] = 1;
+            answers[currentQuestion] = optionMapping[currentQuestion][0];
         } else if (rbOptionB.isChecked()) {
-            answers[currentQuestion] = 2;
-        } else {
-            answers[currentQuestion] = 3;
+            answers[currentQuestion] = optionMapping[currentQuestion][1];
+        } else if (rbOptionC.isChecked()) {
+            answers[currentQuestion] = optionMapping[currentQuestion][2];
         }
     }
 
     private void calculateResult() {
-        for (int answer : answers) {
-            if (answer == 1) agroCount++;
-            else if (answer == 2) infoCount++;
-            else if (answer == 3) adminCount++;
+        // Reseta contadores
+        agroCount = 0;
+        adminCount = 0;
+        infoCount = 0;
+
+        // Conta as respostas por curso
+        for (String answer : answers) {
+            if (answer != null) {
+                switch (answer) {
+                    case AGRO:
+                        agroCount++;
+                        break;
+                    case INFO:
+                        infoCount++;
+                        break;
+                    case ADMIN:
+                        adminCount++;
+                        break;
+                }
+            }
         }
+
+        // Log para debug
+        Log.d("QuizResult", "Agro: " + agroCount + ", Info: " + infoCount + ", Admin: " + adminCount);
     }
 
     private void showResult() {
         try {
             Intent intent = new Intent(this, ResultActivity.class);
 
-            // Verificação para empates
+            // Determina o resultado baseado na maior pontuação
             if (agroCount == infoCount && infoCount == adminCount) {
                 intent.putExtra("result", "Perfil Multifacetado");
                 intent.putExtra("description", "Você demonstra aptidões equilibradas para várias áreas!");
             }
             else if (agroCount > infoCount && agroCount > adminCount) {
                 intent.putExtra("result", "Técnico em Agropecuária");
-                intent.putExtra("description", "Seu perfil demonstra forte conexão com atividades práticas...");
+                intent.putExtra("description", "Seu perfil demonstra forte conexão com atividades práticas e sustentáveis relacionadas ao meio ambiente e agropecuária.");
             }
             else if (infoCount > adminCount) {
                 intent.putExtra("result", "Técnico em Informática");
-                intent.putExtra("description", "Seu interesse por tecnologia...");
+                intent.putExtra("description", "Seu interesse por tecnologia e resolução de problemas digitais indica grande afinidade com a área de informática.");
             }
             else {
                 intent.putExtra("result", "Técnico em Administração");
-                intent.putExtra("description", "Sua habilidade em organização...");
+                intent.putExtra("description", "Sua habilidade em organização, planejamento e gestão demonstra aptidão para a área administrativa.");
             }
 
             startActivity(intent);
