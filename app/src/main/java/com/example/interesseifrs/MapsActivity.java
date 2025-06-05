@@ -56,7 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     // Campus coordinates
-    private static final LatLng IFRS_ROLANTE = new LatLng(-29.6505, -50.5770);
+    private static final LatLng IFRS_ROLANTE = new LatLng(-29.65532385, -50.61720449);
     private static final int DEFAULT_ZOOM_LEVEL = 12;
     private static final int POLYLINE_WIDTH = 8;
     private static final int POLYLINE_COLOR = Color.BLUE;
@@ -96,11 +96,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         addCampusMarker();
 
         if (checkLocationPermission()) {
-            enableMyLocation();
+            enableMyLocation(); // Obtém a localização e traça rota até IFRS
         } else {
-            // Se não tiver permissão, ainda pode mostrar rota do campus para um ponto fixo (para teste)
-            LatLng pontoTeste = new LatLng(-29.6405, -50.5670); // Ponto próximo para teste
-            fetchRoute(pontoTeste, IFRS_ROLANTE, "driving-car");
+            Toast.makeText(this, "Permissão de localização negada. Não é possível traçar a rota.", Toast.LENGTH_SHORT).show();
         }
     }
 

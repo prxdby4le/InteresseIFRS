@@ -28,7 +28,7 @@ public class SobreCursos extends AppCompatActivity {
         textView.setText(Html.fromHtml(getString(R.string.vantagens), Html.FROM_HTML_MODE_COMPACT));
     }
     public void voltar (View v) {
-        Intent i = new Intent(this, ProcessoSeletivo.class);
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
     public void home (View v) {

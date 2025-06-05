@@ -31,83 +31,83 @@ public class QuizActivity extends AppCompatActivity {
     private static final String ADMIN = "ADMIN";
 
     private String[] questions = {
-            "Qual ambiente de trabalho você imagina como o mais inspirador?",
-            "Quando pensa em colocar um projeto em prática, o que mais te motiva?",
-            "Qual atividade você se vê realizando com mais prazer no seu tempo livre?",
-            "Ao decidir sua carreira, qual aspecto é mais importante para você?",
-            "Que tipo de desafio profissional te atrai mais?",
-            "Imagine seu dia ideal de trabalho. O que não pode faltar?",
-            "Qual dessas atitudes você considera mais gratificante?",
-            "Na resolução de um problema, qual abordagem te parece mais atraente?",
-            "Como seria o dia a dia ideal para você?",
-            "Qual aspecto do seu futuro profissional mais te entusiasma?"
+            "1. Em um projeto em grupo, qual função você prefere desempenhar?",
+            "2. Qual dessas atividades você mais se identifica?",
+            "3. O que mais te atrai em um dia de trabalho?",
+            "4. Quando surge um problema, como você costuma agir?",
+            "5. Qual destas ferramentas você mais gostaria de dominar?",
+            "6. O que te motiva mais em um ambiente profissional?",
+            "7. Qual destes desafios você prefere encarar?",
+            "8. Em qual dessas situações você se sentiria mais confortável?",
+            "9. Qual destes tópicos você gostaria de aprender mais?",
+            "10. Como você se imagina daqui a alguns anos?"
     };
 
     private String[][] options = {
             {
-                    "Um espaço onde o contato com a natureza e atividades práticas fazem parte do dia.",
-                    "Um local que permite a exploração de tecnologias e desafios digitais.",
-                    "Um ambiente dinâmico que valoriza a organização, o planejamento e o trabalho em equipe."
+                    "A) Coordenar as tarefas e garantir que tudo esteja nos prazos.",
+                    "B) Resolver problemas técnicos e buscar soluções criativas.",
+                    "C) Trabalhar ao ar livre, cuidando da execução prática das atividades."
             },
             {
-                    "Contribuir com iniciativas que envolvem sustentabilidade e a promoção do meio ambiente.",
-                    "Enfrentar problemas por meio da lógica e da utilização de ferramentas inovadoras.",
-                    "Planejar e coordenar estratégias que transformem ideias em resultados concretos."
+                    "A) Cuidar de plantas, animais ou realizar atividades em contato com a natureza.",
+                    "B) Elaborar estratégias para melhorar os resultados de um negócio",
+                    "C) Criar e testar programas e sistemas para facilitar processos."
             },
             {
-                    "Explorar espaços ao ar livre e aprender sobre métodos práticos de cultivo e manejo.",
-                    "Investigar novas tecnologias, experimentando softwares e soluções digitais.",
-                    "Organizar encontros ou eventos, cuidando dos detalhes de uma rotina estruturada."
+                    "A) Ficar concentrado, programando ou mexendo em equipamentos eletrônicos.",
+                    "B) Estar em campo, realizando atividades práticas e manuais.",
+                    "C) Analisar relatórios e pensar em formas de otimizar processos."
             },
             {
-                    "Ter uma rotina que permita um contato direto com processos práticos e naturais.",
-                    "Utilizar o raciocínio crítico e a inovação tecnológica para solucionar desafios.",
-                    "Desenvolver habilidades de liderança e trabalhar na criação de estratégias eficientes"
+                    "A) Analisa a situação e busca uma solução que beneficie o grupo.",
+                    "B) Coloca a mão na massa e experimenta soluções na prática.",
+                    "C) Pesquisa ferramentas ou técnicas para resolver de forma eficiente."
             },
             {
-                    "Envolver-se em atividades ligadas à utilização prática de recursos e métodos naturais.",
-                    "Resolver problemas por meio de sistemas digitais e desenvolvimentos tecnológicos.",
-                    "Otimizar processos e gerir equipes para alcançar metas e resultados planejados."
+                    "A) Linguagens de programação e softwares.",
+                    "B) Planilhas e gráficos para tomada de decisões.",
+                    "C) Equipamentos agrícolas e técnicas de manejo."
             },
             {
-                    "Momentos que incluam trabalho prático em ambientes com elementos naturais.",
-                    "Desafios que instiguem o uso de novas linguagens e ferramentas tecnológicas",
-                    "Uma rotina marcada por reuniões, planejamento e a coordenação de projetos."
+                    "A) Trabalhar diretamente com a terra ou com animais.",
+                    "B) Aprender sobre novas tecnologias e criar soluções inovadoras.",
+                    "C) Liderar equipes e ver os resultados acontecerem."
             },
             {
-                    "Fazer parte de iniciativas que promovam práticas sustentáveis e o cuidado com o ambiente.",
-                    "Desvendar códigos, explorar recursos digitais e solucionar problemas com criatividade.",
-                    "Administrar recursos, conduzir equipes e estruturar projetos com visão de futuro."
+                    "A) Fazer um plano de negócios para uma nova empresa.",
+                    "B) Desenvolver um aplicativo para resolver um problema.",
+                    "C) Cuidar de uma plantação ou criação de animais até a colheita ou o abate."
             },
             {
-                    "Experimentar soluções práticas e colocar a mão na massa, observando os resultados diretamente.",
-                    "Analisar a situação usando ferramentas digitais e métodos de raciocínio lógico.",
-                    "Organizar as informações e articular um plano com contribuições de diferentes pessoas."
+                    "A) Ficar horas concentrado em frente ao computador, resolvendo problemas técnicos.",
+                    "B) Passar o dia realizando atividades físicas ao ar livre.",
+                    "C) Participar de reuniões para definir metas e estratégias."
             },
             {
-                    "Um dia repleto de atividades que mesclam trabalho prático e contato com a natureza.",
-                    "Um dia onde a utilização intensa de tecnologias e a resolução de desafios digitais prevaleçam.",
-                    "Um dia estruturado, onde a coordenação de tarefas e o planejamento estratégico sejam essenciais."
+                    "A) Como abrir e gerenciar uma empresa.",
+                    "B) Como aumentar a produtividade no cultivo ou na criação de animais.",
+                    "C) Como criar sistemas, aplicativos ou sites."
             },
             {
-                    "Contribuir para projetos que valorizem métodos sustentáveis e o método prático de trabalhar.",
-                    "Mergulhar em um universo de inovações tecnológicas e aprendizado contínuo em ambientes digitais.",
-                    "Ser o responsável por coordenar estratégias e impulsionar o crescimento por meio da gestão e organização."
+                    "A) Atuando no campo, produzindo alimentos e cuidando do meio ambiente.",
+                    "B) Trabalhando com tecnologia, sempre aprendendo coisas novas.",
+                    "C) Gerenciando uma equipe ou um negócio próprio."
             }
     };
 
     // Mapeamento direto: cada posição corresponde ao curso que a resposta representa
     // Para cada pergunta: [Curso da Opção A, Curso da Opção B, Curso da Opção C]
     private String[][] optionMapping = {
-            {AGRO, INFO, ADMIN},    // Pergunta 0
-            {AGRO, INFO, ADMIN},    // Pergunta 1
-            {AGRO, INFO, ADMIN},    // Pergunta 2
-            {AGRO, INFO, ADMIN},    // Pergunta 3
-            {AGRO, INFO, ADMIN},    // Pergunta 4
+            {ADMIN, INFO, AGRO},    // Pergunta 0
+            {AGRO, ADMIN, INFO},    // Pergunta 1
+            {INFO, AGRO, ADMIN},    // Pergunta 2
+            {ADMIN, AGRO, INFO},    // Pergunta 3
+            {INFO, ADMIN, AGRO},    // Pergunta 4
             {AGRO, INFO, ADMIN},    // Pergunta 5
-            {AGRO, INFO, ADMIN},    // Pergunta 6
-            {AGRO, INFO, ADMIN},    // Pergunta 7
-            {AGRO, INFO, ADMIN},    // Pergunta 8
+            {ADMIN, INFO, AGRO},    // Pergunta 6
+            {INFO, AGRO, ADMIN},    // Pergunta 7
+            {ADMIN, AGRO, INFO},    // Pergunta 8
             {AGRO, INFO, ADMIN}     // Pergunta 9
     };
 
