@@ -44,8 +44,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final String TAG = "MapsActivity";
     private static final int LOCATION_REQUEST_CODE = 1001;
 
-    // IMPORTANTE: Substitua pela sua chave de API gratuita do OpenRouteService
-    // Obtenha em: https://openrouteservice.org/dev/#/signup
+    //
+    //https://openrouteservice.org/dev/#/signup
     private static final String OPENROUTE_API_KEY = "5b3ce3597851110001cf6248ccb5c9e10b5645cc9fd1239344080ee8";
     private static final String OPENROUTE_BASE_URL = "https://api.openrouteservice.org/v2/directions";
 
